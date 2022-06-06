@@ -21,6 +21,11 @@ public class ServletExController {
         response.sendError(HttpServletResponse.SC_NOT_FOUND, "404 오류!");
     }
 
+    @GetMapping("/error-400")
+    public void error400(HttpServletResponse response) throws IOException {
+        response.sendError(HttpServletResponse.SC_BAD_REQUEST, "400 오류!");
+    }
+
     @GetMapping("/error-500")
     public void error500(HttpServletResponse response) throws IOException {
         response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
